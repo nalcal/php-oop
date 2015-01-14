@@ -40,11 +40,11 @@
    
    class Tiger {
 
-public $location = â€œIndiaâ€;
+public $location = “India”;
 
-public $species = â€œcatâ€;
+public $species = “cat”;
 
-public $gender = â€œmaleâ€;
+public $gender = “male”;
 
 public $population = 140;
 
@@ -52,11 +52,11 @@ public $population = 140;
 
 class Lion {
 
-public $location = â€œAfricaâ€;
+public $location = “Africa”;
 
-public $species = â€œcatâ€;
+public $species = “cat”;
 
-public $gender = â€œmaleâ€;
+public $gender = “male”;
 
 public $population = 1400;
 
@@ -64,11 +64,11 @@ public $population = 1400;
 
 class Puma {
 
-public $location = â€œSouth Americaâ€;
+public $location = “South America”;
 
-public $species = â€œcatâ€;
+public $species = “cat”;
 
-public $gender = â€œmaleâ€;
+public $gender = “male”;
 
 public $population = 1500;
 
@@ -76,19 +76,19 @@ public $population = 1500;
 
 $tiger1 = new Tiger();
 
-print $tiger1Â­>name;
+print $tiger1­>name;
 
 // default name
 
 $lion1 = new Lion();
 
-print $lion1Â­>name;
+print $lion1­>name;
 
 // default name
 
 $puma1 = new Puma();
 
-print $puma1Â­>name;
+print $puma1­>name;
 
 // default name
 
@@ -97,3 +97,89 @@ public function myMethod( $argument, $another) {
 // stuff
 
 }
+//lecture 5
+class zoo {
+
+public $monkeys;
+
+public $lions;
+
+public $tigers;
+
+public $zebras;
+
+public $elephants;
+
+public $fish;
+
+public $snakes;
+
+function __construct($tigers, $monkeys, $lions, $zebras, $elephants, $fish, $snakes) {
+
+$this­>tigers = $tigers;
+
+$this­>monkeys = $monkeys;
+
+$this­>lions = $lions;
+
+$this­>zebras = $zebras;
+
+$this­>elephants = $elephants;
+
+$this­>fish = $fish;
+
+$this­>snakes = $snakes;
+
+}
+
+function zoo() {
+
+return “This is my “ . $this­>monkeys .
+
+“ and lions ” . $this­>lions .
+
+“ and this is my tigers “ . $this­>tigers . “ .”;
+
+}
+
+}
+
+class Monkeys extends Zoo {
+
+function __construct($tigers, $monkeys, $lions, $zebras, $elephants, $fish){
+
+$this­>zoo = $zoo;
+
+}
+
+function zoo() {
+
+return $this­>zoo;
+
+parent::__construct($tigers, $monkeys, $lions, $zebras, $elephants);
+
+}
+
+}
+
+class Dog extends Zoo {
+
+function __construct($tigers, $monkeys, $lions, $zebras, $elephants, $fish) {
+
+$this­>bark = $snakes;
+
+}
+
+function zoo() {
+
+return $this­>snakes;
+
+}
+
+}
+
+$zoo = new Cat(“Fish”, “monkeys”, “zebras”, “lions”, 15, true);
+
+print “Zoo 1 is a ” . $zoo­>zoo();
+
+parent::__construct($tigers, $monkeys, $lions, $zebras, $elephants);
