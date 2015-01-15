@@ -61,10 +61,9 @@ public $gender = “male”;
 public $population = 1400;
 
 }
-
 class Puma {
-
-public $location = “South America”;
+    
+public $location = “America”;
 
 public $species = “cat”;
 
@@ -80,6 +79,7 @@ print $tiger1­>name;
 
 // default name
 
+
 $lion1 = new Lion();
 
 print $lion1­>name;
@@ -91,12 +91,6 @@ $puma1 = new Puma();
 print $puma1­>name;
 
 // default name
-
-public function myMethod( $argument, $another) {
-
-// stuff
-
-}
 //lecture 5
 class zoo {
 
@@ -115,7 +109,7 @@ public $fish;
 public $snakes;
 
 function __construct($tigers, $monkeys, $lions, $zebras, $elephants, $fish, $snakes) {
-
+    
 $this­>tigers = $tigers;
 
 $this­>monkeys = $monkeys;
